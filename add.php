@@ -10,8 +10,10 @@ if(isset($_POST['submit'])){
     $sqlQuery = $conn->prepare($sql);
 
     $sqlQuery->bindParam(':name',$name);
-    $sqlQuery->bindParam(':surname',$surname);
+    $sqlQuery->bindParam(':username',$username);
     $sqlQuery->bindParam(':email',$email);
+    $sqlQuery->bindParam(':password',$password);
+
 
     $sqlQuery->execute();
 
